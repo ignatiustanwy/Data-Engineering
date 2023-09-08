@@ -19,7 +19,7 @@ events_dataframe = pd.DataFrame(columns = column_names)
 # that start prior to April 2019, eg. Start Date 2019, End Date 2019 is counted as an 
 # event in April 2019
 # 2) As Event Id is collected, if the restaurant has more than 1 event in April 2019, 
-# both event Ids are collected, resulting in repeated restaurant Id, and name
+# both event Ids are collected, resulting in repeated restaurant id, and name
 
 
 apr_1st = datetime(2019,4,1) 
