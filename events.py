@@ -20,7 +20,8 @@ events_dataframe = pd.DataFrame(columns = column_names)
 # event in April 2019
 # 2) As Event Id is collected, if the restaurant has more than 1 event in April 2019, 
 # both event Ids are collected, resulting in repeated restaurant id, and name
-
+# 3) I used photos attached to the events instead of using photos of the restaurant itself,
+# as there are restaurants with more than 1 events in the month of April 2019.
 
 apr_1st = datetime(2019,4,1) 
 
@@ -45,7 +46,11 @@ for results in restaurants:
                     event_id = event['event']['event_id']
                     res_id = restaurant['R']['res_id']
                     name = restaurant['name']
-                    photo = restaurant['photos_url']
+                    #photo = restaurant['photos_url']
+                    try:
+                        photo = event['event']['photos'][0]['photo']['url'] 
+                    except:
+                        photo = 'NA'
                     title = event['event']['title']
                     values = [event_id,res_id,name,photo,title,start_date,end_date]
                     dic = {}
