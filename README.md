@@ -59,6 +59,7 @@ airflow dags test task_2_etl 2023-9-9
 airflow dags test task_3_etl 2023-9-9
 ```
 ## Additional Notes
+For both **restaurants_airflow.py** and **restaurants.py**
 Variable **country_file**: the file path should be changed to the path where the Country Code excel file (given) is stored in
 
 [![image.png](https://i.postimg.cc/CLBCZdHN/image.png)](https://postimg.cc/JG8HvrFD)

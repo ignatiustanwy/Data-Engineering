@@ -21,9 +21,14 @@ def task_2_processing():
     events_dataframe = pd.DataFrame(columns = column_names)
 
     #Assumptions: 
-    # 1)Definition of events in the month of April 2019: Events that start in the month of April 2019 and events that start prior to April 2019 that end on April 2019 or later. (eg. An Event with Start Date in March 2019 and End Date in May 2019 is considered an event in April 2019)
-    # 2)As Event Id is the primary key, if the restaurant has more than 1 event in April 2019, all events satisfying the condition are collected, resulting in repeated restaurant ids and names.
-    # 3)URLs stored in “Photo URL” column are photos of the events instead of photos for the restaurant.
+    # 1)events that are in the month of April 2019 consists of events 
+    # that start prior to April 2019, eg. Start Date 2019, End Date 2019 is counted as an 
+    # event in April 2019
+    # 2) As Event Id is collected, if the restaurant has more than 1 event in April 2019, 
+    # both event Ids are collected, resulting in repeated restaurant id, and name
+    # 3) I used photos attached to the events instead of using photos of the restaurant itself,
+    # as there are restaurants with more than 1 events in the month of April 2019.
+
     apr_1st = datetime(2019,4,1) 
 
     for results in restaurants:

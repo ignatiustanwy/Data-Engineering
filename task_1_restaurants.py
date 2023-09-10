@@ -3,8 +3,10 @@ import json
 from urllib.request import urlopen
 import os
 
+
 #reading excel file into a dataframe
-country_file = 'country-code.xlsx'
+#change to the path of the excel file containing the list of countries and their country codes
+country_file = '/Users/iggyten/Documents/GitHub/Data-Engineering/country-code.xlsx'
 country_code = pd.read_excel(country_file,'Sheet1')
 
 #create a hashmap of the dataframe
