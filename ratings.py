@@ -15,7 +15,7 @@ restaurants = json.loads(source)
 #eg. an aggregate rating of 4.1 has been assigned to Good instead of Very Good.
 
 def threshold():
-    #rating_texts = {"Excellent": 0,
+    # rating_texts = {"Excellent": 0,
     #       "Very Good": 0,
     #       "Good": 0,
     #       "Average": 0,
